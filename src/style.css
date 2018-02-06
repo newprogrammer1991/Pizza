@@ -1,0 +1,71 @@
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pizza__item {
+    display: flex;
+    padding: 16px 3px 17px;
+    align-items: center;
+}
+
+.pizza__item-options {
+    display: flex;
+}
+
+.btn__control {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid red;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn__control:after, .btn__control-plus:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 11px;
+    height: 1px;
+    top: 50%;
+    margin: 0 auto;
+    background-color: red;
+
+}
+
+.btn__control:after {
+    transform: translate(-50%, 50%);
+}
+
+.btn__control-plus:before {
+    transform: translate(-50%, 50%) rotate(90deg);
+}
+
+.btn__action {
+    width: 80px;
+    height: 23px;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.pizza__item.delete .pizza__item-img,
+.pizza__item.delete .pizza__item-description,
+.pizza__item.delete .pizza__item-description1,
+.pizza__item.delete .pizza__item-control {
+    opacity: 0.5;
+}
