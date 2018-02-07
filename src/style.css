@@ -10,17 +10,31 @@ a {
     text-decoration: none;
 }
 
-.pizza__item {
+.btn {
+    outline: none;
+    outline-offset: 0;
+}
+
+.pizza {
+    margin-bottom: 85px;
+}
+
+.pizza__item, .pizza__item-control {
     display: flex;
-    padding: 16px 3px 17px;
     align-items: center;
+    justify-content: space-around;
 }
 
-.pizza__item-options {
-    display: flex;
+.pizza__list {
+    border-top: 1px solid #bfbfbf
 }
 
-.btn__control {
+.pizza__item {
+    padding: 16px 3px 17px;
+    border-bottom: 1px solid #bfbfbf
+}
+
+.pizza__item-control .btn {
     display: block;
     position: relative;
     width: 25px;
@@ -29,9 +43,23 @@ a {
     box-sizing: border-box;
     border-radius: 50%;
     cursor: pointer;
+    background-color: white;
 }
 
-.btn__control:after, .btn__control-plus:before {
+.pizza__item-control .count {
+    padding: 0 10px 0 10px;
+}
+
+.pizza__item-description p {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.pizza__item-description1 p {
+    line-height: 1.2;
+}
+
+.pizza__item-control .btn:after, .btn_plus:before {
     content: '';
     display: block;
     position: absolute;
@@ -44,23 +72,23 @@ a {
 
 }
 
-.btn__control:after {
+.pizza__item-control .btn:after {
     transform: translate(-50%, 50%);
 }
 
-.btn__control-plus:before {
+.pizza__item-control .btn_plus:before {
     transform: translate(-50%, 50%) rotate(90deg);
 }
 
-.btn__action {
-    width: 80px;
-    height: 23px;
-    border: 1px solid rgb(191, 191, 191);
+.btn-action {
+    width: 82px;
+    height: 25px;
+    margin-left: auto;
+    color: #a6a6a6;
+    font-size: 13px;
+    background-color: transparent;
     border-radius: 10px;
-    outline: none;
-    cursor: pointer;
-    background-color: white;
-
+    border: 1px solid #bfbfbf;
 }
 
 .pizza__item.delete .pizza__item-img,
@@ -68,4 +96,45 @@ a {
 .pizza__item.delete .pizza__item-description1,
 .pizza__item.delete .pizza__item-control {
     opacity: 0.5;
+}
+
+.btn_minus[disabled] {
+    opacity: 0.5;
+}
+
+.progress__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.progress__bar {
+    position: relative;
+    width: 240px;
+    height: 23px;
+    margin-left: 75px;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 10px;
+}
+
+.progress__bar-fill {
+    display: block;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.progress__bar-fill_circle {
+    border-radius: 10px;
+}
+
+.progress__value {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.progress__value_right {
+    text-align: right;
 }

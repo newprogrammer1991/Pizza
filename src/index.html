@@ -6,83 +6,101 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-    <div class="pizza__list">
-        <div class="pizza__item" id="pizza1">
-            <div class="pizza__item-img">
-                <img src="img/pizza.png">
+<div>
+    <div class="pizza">
+        <div class="pizza__list">
+            <div class="pizza__item" id="pizza1">
+                <div class="pizza__item-img">
+                    <img src="img/pizza.png">
+                </div>
+                <div class="pizza__item-description">
+                    <p>Пицца Пепперони на тон...</p>
+                </div>
+                <div class="pizza__item-description1">
+                    <p>
+                        Пепперони, моцарелла, том....
+                    </p>
+                </div>
+                <div class="pizza__item-control" id="control1">
+                    <button class="btn btn_minus">
+                    </button>
+                    <span class="count">0</span>
+                    <button class="btn btn_plus">
+                    </button>
+                </div>
+                <div class="pizza__item-action">
+                    <button class="btn btn-action" type="submit">Удалить</button>
+                </div>
             </div>
-            <div class="pizza__item-description">
-                <p>Пицца Пепперони на тон...</p>
+            <div class="pizza__item" id="pizza2">
+                <div class="pizza__item-img">
+                    <img src="img/pizza.png">
+                </div>
+                <div class="pizza__item-description">
+                    <p>Пицца Пепперони на тон...</p>
+                </div>
+                <div class="pizza__item-description1">
+                    <p>
+                        Пепперони, моцарелла, том....
+                    </p>
+                </div>
+                <div class="pizza__item-control" id="control2">
+                    <button class="btn btn_minus">
+                    </button>
+                    <span class="count">0</span>
+                    <button class="btn btn_plus">
+                    </button>
+                </div>
+                <div class="pizza__item-action">
+                    <button class="btn btn-action" type="submit">Удалить</button>
+                </div>
             </div>
-            <div class="pizza__item-description1">
-                <p>
-                    Пепперони, моцарелла, том....
-                </p>
-            </div>
-            <div class="pizza__item-control" id="control1">
-                <a class="btn-control btn-control-minus">
-                </a>
-                <span class="count">0</span>
-                <a class="btn-control btn-control-plus">
-                </a>
-            </div>
-            <div class="pizza__item-action">
-                <button class="btn-action" type="submit">Удалить</button>
-            </div>
-        </div>
-        <div class="pizza-item" id="pizza2">
-            <div class="pizza__item-img">
-                <img src="img/pizza.png">
-            </div>
-            <div class="pizza__item-description">
-                <p>Пицца Пепперони на тон...</p>
-            </div>
-            <div class="pizza__item-description1">
-                <p>
-                    Пепперони, моцарелла, том....
-                </p>
-            </div>
-            <div class="pizza__item-control" id="control2">
-                <a class="btn-control btn-control-minus">
-                </a>
-                <span class="count">0</span>
-                <a class="btn-control btn-control-plus">
-                </a>
-            </div>
-            <div class="pizza__item-action">
-                <button class="btn-action" type="submit">Удалить</button>
-            </div>
-        </div>
-        <div class="pizza-item" id="pizza3">
-            <div class="pizza__item-img">
-                <img src="img/pizza.png">
-            </div>
-            <div class="pizza__item-description">
-                <p>Пицца Пепперони на тон...</p>
-            </div>
-            <div class="pizza__item-description1">
-                <p>
-                    Пепперони, моцарелла, том....
-                </p>
-            </div>
-            <div class="pizza__item-control" id="control3">
-                <a class="btn-control btn-control-minus">
-                </a>
-                <span class="count">0</span>
-                <a class="btn-control btn-control-plus">
-                </a>
-            </div>
-            <div class="pizza__item-action">
-                <button class="btn-action" type="submit">Удалить</button>
+            <div class="pizza__item" id="pizza3">
+                <div class="pizza__item-img">
+                    <img src="img/pizza.png">
+                </div>
+                <div class="pizza__item-description">
+                    <p>Пицца Пепперони на тон...</p>
+                </div>
+                <div class="pizza__item-description1">
+                    <p>
+                        Пепперони, моцарелла, том....
+                    </p>
+                </div>
+                <div class="pizza__item-control" id="control3">
+                    <button class="btn btn_minus">
+                    </button>
+                    <span class="count">0</span>
+                    <button class="btn btn_plus">
+                    </button>
+                </div>
+                <div class="pizza__item-action">
+                    <button class="btn btn-action" type="submit">Удалить</button>
+                </div>
             </div>
         </div>
     </div>
+    <div class="progress">
+        <div class="progress__list">
+            <div class="progress__item">
+                <span class="progress__order-num">№3208957205790</span>
+                <div class="progress__bar">
+                    <span class="progress__bar-fill " style="width: 40%"></span>
+                    <span class="progress__value">40%</span>
+                </div>
+            </div>
+            <div class="progress__item">
+                <span class="progress__order-num">№3208957205790</span>
+                <div class="progress__bar">
+                    <span class="progress__bar-fill progress__bar-fill_circle" style="width: 100%">
+                    </span>
+                    <span class="progress__value progress__value_right">100%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-<div></div>
-
-
 <script src="index.js"></script>
 </body>
 </html>

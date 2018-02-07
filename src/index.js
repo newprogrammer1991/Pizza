@@ -3,13 +3,13 @@ class Control {
         this.elem = options.elem;
         this.count = 1;
         this.elem.addEventListener('click', (event) => {
-            if (event.target.closest('.btn-control-minus')) {
+            if (event.target.closest('.btn_minus')) {
                 this.decrement();
             }
-            else if (event.target.closest('.btn-control-plus')) {
+            else if (event.target.closest('.btn_plus')) {
                 this.increment();
             }
-            else if (event.target.closest('.btn-action')) {
+            if (event.target.closest('.btn-action')) {
                 this.toggle();
             }
         })
@@ -22,20 +22,44 @@ class Control {
     }
 
     decrement() {
-        if (this.count === 1)return;
+        if (this.check())return;
         this.count = this.count - 1;
         this.setCount();
     }
 
     setCount() {
+        this.check();
         let count = this.elem.querySelector('.count');
         count.innerHTML = this.count;
     }
 
     toggle() {
-        this.elem.classList.toggle('delete');
+        const mainElem = this.elem;
+        const btn = mainElem.querySelector('.btn-action');
+        mainElem.classList.toggle('delete');
+        btn.innerHTML = mainElem.classList.contains('delete') ? 'Вернуть' : 'Удалить';
+        if (mainElem.classList.contains('delete')) {
+            btn.innerHTML = 'Вернуть';
+            this.elem.querySelector('.btn_minus').disabled = true;
+            this.elem.querySelector('.btn_plus').disabled = true;
+        }
+        else {
+            btn.innerHTML = 'Удалить';
+            this.elem.querySelector('.btn_minus').disabled = false;
+            this.elem.querySelector('.btn_plus').disabled = false;
+        }
     }
 
+    check() {
+        const btnMinus = this.elem.querySelector('.btn_minus');
+        if (this.count === 1) {
+            btnMinus.disabled = true;
+            return true;
+        }
+        else {
+            btnMinus.disabled = false;
+        }
+    }
 }
 
 
