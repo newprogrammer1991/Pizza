@@ -1,3 +1,4 @@
+
 class Control {
     constructor(options) {
         this.elem = options.elem;

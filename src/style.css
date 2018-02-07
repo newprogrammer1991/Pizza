@@ -13,6 +13,7 @@ a {
 .btn {
     outline: none;
     outline-offset: 0;
+    cursor: pointer;
 }
 
 .pizza {
@@ -42,7 +43,6 @@ a {
     border: 2px solid red;
     box-sizing: border-box;
     border-radius: 50%;
-    cursor: pointer;
     background-color: white;
 }
 
@@ -98,6 +98,11 @@ a {
     opacity: 0.5;
 }
 
+.pizza__item.delete .btn-action {
+    color: white;
+    background-color: red;
+}
+
 .btn_minus[disabled] {
     opacity: 0.5;
 }
@@ -131,10 +136,6 @@ a {
 
 .progress__value {
     display: block;
+    position: absolute;
     margin-top: 8px;
-    text-align: center;
-}
-
-.progress__value_right {
-    text-align: right;
 }
